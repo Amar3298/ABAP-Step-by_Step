@@ -1,0 +1,13 @@
+Internal Table Operations 
+-> Append
+
+Data Dictionary 
+	->Domain Creation 
+	->Data Element Creation 
+	->Table Creation
+	-> Maintaining Data in the Table 
+	-> TMG(Table Maintenance Generator)
+Basic O Data Creation
+
+ZORDH_28
+Z02_AR_SRV

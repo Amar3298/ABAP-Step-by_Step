@@ -1,0 +1,12 @@
+Internal Table Operations 
+	-> Append
+	-> LOOP AT Internal Table
+	-> DELETE 
+	->Modify 
+Column-based tables in SAP HANA
+Analysis of .hdbtable
+
+ZAR_19_ITERNAL_WORK
+ZAR_20_TABLE_TYPE_ITERNAL
+ZAR_21_APPEND_ITERNAL
+ZAR_22_MODIFY_INTERNAL_TABLE
