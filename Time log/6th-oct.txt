@@ -3,3 +3,5 @@ Internal Table Operation
 	-> Describe Table
 	-> Sort
 	-> Collect
+Application Server Architecture 
+SAP System Landscape
