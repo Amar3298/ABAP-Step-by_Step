@@ -1,0 +1,7 @@
+Internal Table Operation 
+	-> Clear Refresh
+	-> Describe Table
+	-> Sort
+	-> Collect
+Application Server Architecture 
+SAP System Landscape
