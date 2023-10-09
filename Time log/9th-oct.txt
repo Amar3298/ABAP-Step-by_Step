@@ -7,6 +7,9 @@ Application Server Architecture
 SAP System Landscape
 Internal Table with Header Line
 Internal Table without Header Line 
+Analysis of calculation view 
+Rank in HANA Cloud
+
 
 ZAR_24_CLEAR_REFREASH
 ZAR_25_DESCRIBE_TABLE
