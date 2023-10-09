@@ -7,3 +7,10 @@ Application Server Architecture
 SAP System Landscape
 Internal Table with Header Line
 Internal Table without Header Line 
+
+ZAR_24_CLEAR_REFREASH
+ZAR_25_DESCRIBE_TABLE
+ZAR_26_SORT
+ZAR_27_COLLECT
+ZAR_28_IT_HEADER_LINE
+ZAR_29_IT_WITHOUT_HEADER

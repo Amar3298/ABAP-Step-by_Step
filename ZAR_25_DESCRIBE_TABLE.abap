@@ -1,3 +1,4 @@
+REPORT ZAR_25_DESCRIBE_TABLE.
 TABLES: zordh_28.
 TYPES: BEGIN OF it_struc,
        ono TYPE zdeono_28,
@@ -20,3 +21,4 @@ ELSE.
 ENDIF.
 
 DESCRIBE TABLE it_data LINES lv_data.
+WRITE: / lv_data.

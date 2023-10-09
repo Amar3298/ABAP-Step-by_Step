@@ -1,3 +1,4 @@
+REPORT ZAR_27_COLLECT.
 TYPES: BEGIN OF it_struc,
        cname TYPE String,
        dept TYPE String,
@@ -11,34 +12,34 @@ DATA: it_data TYPE TABLE OF it_struc,
 WA_DATA-cname = 'ABC'.
 WA_DATA-dept = 'ADMIN'.
 WA_DATA-Amount = '10000.00'.
-APPEND WA_DATA INTO it_data.
+APPEND WA_DATA TO it_data.
 CLEAR WA_DATA.
 
 WA_DATA-cname = 'ABC'.
 WA_DATA-dept = 'HR'.
 WA_DATA-Amount = '20000.00'.
-APPEND WA_DATA INTO it_data.
+APPEND WA_DATA TO it_data.
 CLEAR WA_DATA.
 
 WA_DATA-cname = 'ABC'.
 WA_DATA-dept = 'ADMIN'.
 WA_DATA-Amount = '50000.00'.
-APPEND WA_DATA INTO it_data.
+APPEND WA_DATA TO it_data.
 CLEAR WA_DATA.
 
 WA_DATA-cname = 'ABC'.
 WA_DATA-dept = 'TRAINING'.
 WA_DATA-Amount = '10000.00'.
-APPEND WA_DATA INTO it_data.
+APPEND WA_DATA TO it_data.
 CLEAR WA_DATA.
 
 WA_DATA-cname = 'ABC'.
 WA_DATA-dept = 'HR'.
 WA_DATA-Amount = '20000.00'.
-APPEND WA_DATA INTO it_data.
+APPEND WA_DATA TO it_data.
 CLEAR WA_DATA.
 
-here make sure that after collect we should not store it in same internal table or else it will become endless loop
+*here make sure that after collect we should not store it in same internal table or else it will become endless loop
 LOOP AT it_data into wa_data.
     COLLECT wa_data into it_temp_data.
 ENDLOOP.
