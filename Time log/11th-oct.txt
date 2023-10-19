@@ -1,0 +1,6 @@
+                 HANA
+Types of Data (Hot, Cold, Warm)
+Column Store vs Row Store 
+                ABAP
+Primary-foreign key Relationship(Data Dictionary)
+Error Solving for Privileges for Data Explorer(.hdbgrants)
