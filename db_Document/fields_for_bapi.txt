@@ -1,0 +1,10 @@
+Domain 
+ZEID_27
+ZENAME_27
+
+Employee ID
+ZDEEID_27
+ZDEENAME_27
+
+Structure 
+ZBAPI_EMPLOYEE_27

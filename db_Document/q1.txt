@@ -1,0 +1,10 @@
+def funcArrange(inputArr):
+  eL = []
+  oL = []
+  for i in inputArr:
+    if(i%2==0):
+      eL.append(i)
+    else:
+      oL.append(i)
+  res = eL + oL
+  return res

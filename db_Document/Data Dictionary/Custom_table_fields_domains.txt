@@ -1,0 +1,94 @@
+Header Table : - ZORDH_28
+Order Header Table
+Domain 
+
+ZONO_28  	NUMC 10	: - Order Number
+ZODATE_28    DATS 		: - Order Date
+ZPM_28 	   	CHAR 1	        : - Payment Mode (Default Values : - Value Range)
+ZTC_28		CURR (7,2)	: - Total Amount
+ZCUR_28		CUKY 		:- Currency
+
+Data Elements
+
+ZDEONO_28		: - Order Number
+ZDEODATE_28	: - Order Date
+ZDEPM_28		: - Payment Mode
+ZDETA_28		: - Total Amount
+ZDECUR_28		: - Currency
+
+table fields
+MANDT 		-> MANDT 		(key)
+ONO 		-> ZDEONO_28 	(key)
+ODATE		 -> ZDEODATE_28
+PM 			-> ZDEPM_28
+TA 			-> ZDETA_28
+CURR 		-> ZDECUR_28
+
+Item Table : - ZORDI_28
+Order Item Table
+Domain 
+
+ZOITMNO_28		NUMC 2   : - Order Item Number
+ZODESEC_28		CHAR 40  : - Order Description
+
+Data Elements
+
+ZDEOITEMO_28 		: - Order Item Number (ZOITMNO_28)
+ZDEODESC_28		: - Order Description (ZODESEC_28)
+ZDEOICOST_28		: - Item Cost (ZTC_28)
+
+table fields
+
+MANDT		-> MANDT		(Key)
+ONO		->ZDEONO_28	(Key)
+OIN			->ZDEOITEMO_28  (Key)
+ODESC		->ZDEODESC_28  
+ICOST		->ZDEOICOST_28
+
+Before inserting the data in the item table we need to create a primary foreign key relationship between them 
+
+we will include Delivery Number and Delivery Date in Order Header table using Include Structure and we will append the delivery location using apppend structure
+
+Include and append Structure Domain
+ZDN_28		NUMC 	12	: - Delivery Number
+ZDLOC_28	CHAR  	3	: - Delivery Location (MUM Mumbai, AHD Ahmedabad,KOL Kolkata)
+
+Data Elemets
+ZDEDN_28		: - Delivery Number (ZDN_28)
+ZDEDDATE_28	: - Delivery Date (ZODATE_28)
+ZDEDLOC_28		: - Delivery Location (ZDLOC_28)
+
+Include Structure: - ZINSTR_28
+Include Structure for the Order Table
+DNO		-> ZDEDN_28
+DDATE		-> ZDEDDATE_28
+
+
+Tables for Maintenance View
+
+
+Domain
+ZDPN_28 NUMC 8 Project Number
+
+Data Element
+ZDEPN_28		: - Project Number(ZDPN_28)
+ZDEPDES_28		: - Project Description(ZODESEC_28)
+ZDEPLOC_28		: - Project Location(ZDLOC_28)
+
+
+ZTPROJI_28	: - Project Details 1
+Table Fields
+MANDT		->	MANDT	(Key)
+PNO		->ZDEPN_28	(KEY)
+
+ZTPROJ2_28	: - Project Details 2
+Table Fields
+MANDT		->	MANDT		(Key)
+PNO		->	ZDEPN_28	(Key)
+PDES		->	ZDEPDES_28	
+PLOC		->	ZDEPLOC_28
+
+Now define the relationship between these tables
+Cardinality should be 1:1
+
+We will not create TMG for each table instead we will create a maintaince view and will maintain the data in the both the tables.
