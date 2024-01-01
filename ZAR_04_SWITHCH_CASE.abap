@@ -10,6 +10,6 @@ CASE lv_con.
   WHEN OTHERS.
     WRITE: 'Something went Wrong'.
 ENDCASE.
-
+" case is more efficeint than if 
 *when we want to print it on new line use /
 WRITE: / 'Dragon Ball'.
